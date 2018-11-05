@@ -1,0 +1,40 @@
+\begin{center}
+\huge{1982 --}
+\end{center}
+
+\vspace{1in}
+
+\begin{center}
+ \begin{tikzpicture} \genealogytree[template=signpost]{
+    parent{
+      g[male]{\hyperref[Child1]{Child1}}
+      c[female]{\hyperref[Child2]{Child2}}
+      parent{
+        c[female]{Aunty}
+        g[female]{\hyperref[Mother]{Mother}}
+        p[male]{Grandfather}
+        p[female]{Grandmother}
+}
+      p[male]{\hyperref[Father]{Father}}
+    }
+  }
+\end{tikzpicture}
+\end{center}
+
+\newpage
+\section{Timeline}
+\begin{table}[h]
+\renewcommand\arraystretch{1.4}
+\begin{tabular}{@{\,}r <{\hskip 2pt} !{\foo} >{\raggedright\arraybackslash}p{20cm}}
+\addlinespace[1.5ex]
+1st January 1982 & BORN in ...\\
+1st January 1983 & Baptised in ... \\
+\end{tabular}
+\end{table}
+
+\section{Data}
+\begin{itemize}
+\item \href{run:people/Child1/sample.pdf}{Sample pdf}
+\item \href{run:people/Child1/sample.png}{Sample png}
+\item \href{https://github.com/StevenElsworth?tab=repositories}{Sample link} 
+\end{itemize}

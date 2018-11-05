@@ -1,0 +1,69 @@
+\documentclass{book}
+
+% References
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{url}
+
+% For trees
+% http://ftp.math.purdue.edu/mirrors/ctan.org/macros/latex/contrib/genealogytree/genealogytree.pdf
+\usepackage[all]{genealogytree}
+
+% Remove chapter N text
+\usepackage[pagestyles]{titlesec}
+\titleformat{\chapter}[display]{\normalfont\bfseries}{}{0pt}{\Huge}
+\newpagestyle{mystyle}
+{\sethead[\thepage][][\chaptertitle]{}{}{\thepage}}
+\pagestyle{mystyle}
+\titlespacing*{\chapter}{0pt}{0pt}{20pt}
+
+
+% Timeline
+\usepackage{array, booktabs}
+\usepackage{graphicx}
+\newcommand{\foo}{\makebox[0pt]{\textbullet}\hskip-0.5pt\vrule width 1pt\hspace{\labelsep}}
+
+
+\begin{document}
+
+\title{Family Tree}
+\author{Steven Elsworth}
+\maketitle
+
+\chapter{How does it work?}
+This interactive pdf contains a sample family tree. Each member of the family has their own chapter of the book containing:
+\begin{itemize}
+\item Immediate family tree: The small tree contains their siblings, parents, spouse and children. Each member of the tree with their own chapter can be accessed via the hyperlink.
+\item Timeline: A timeline breakdown of key events in their life. 
+\item Data: A list of links which opens external files showing evidence. This can include pdfs/jpeg/png of birth certificates, census records, images or even web links.
+\end{itemize} 
+
+This document works best when opened with Adobe Acrobat Reader.
+
+\vspace{1in}
+Note: if text appears \color{red} red \color{black} then it is a hyperlink.
+
+\chapter{Child1}
+\label{Child1}
+\input{people/Child1/Child1}
+
+\chapter{Child2}
+\label{Child2}
+\input{people/Child2/Child2}
+
+\chapter{Father} 
+\label{Father}
+\input{people/Father/Father}
+
+\chapter{Mother} 
+\label{Mother}
+\input{people/Mother/Mother}
+
+\chapter{Grandfather} 
+\label{Grandfather}
+\input{people/Grandfather/Grandfather}
+
+\chapter{Grandmother} 
+\label{Grandmother}
+\input{people/Grandmother/Grandmother}
+
+\end{document}
